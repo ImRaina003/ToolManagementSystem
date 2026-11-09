@@ -37,6 +37,8 @@ namespace ToolManagementSystem.Controllers
                 _context.Add(tool);
                 await _context.SaveChangesAsync();
 
+                TempData["SuccessMessage"] = "Tool added successfully!";
+
                 return RedirectToAction(nameof(Index));
             }
 
@@ -75,6 +77,8 @@ namespace ToolManagementSystem.Controllers
             {
                 _context.Update(tool);
                 await _context.SaveChangesAsync();
+
+                TempData["SuccessMessage"] = "Tool updated successfully!";
 
                 return RedirectToAction(nameof(Index));
             }
@@ -129,6 +133,8 @@ namespace ToolManagementSystem.Controllers
             {
                 _context.Tools.Remove(tool);
                 await _context.SaveChangesAsync();
+
+                TempData["SuccessMessage"] = "Tool deleted successfully!";
             }
 
             return RedirectToAction(nameof(Index));
