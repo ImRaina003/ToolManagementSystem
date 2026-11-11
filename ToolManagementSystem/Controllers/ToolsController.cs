@@ -134,7 +134,7 @@ namespace ToolManagementSystem.Controllers
                 _context.Tools.Remove(tool);
                 await _context.SaveChangesAsync();
 
-                TempData["SuccessMessage"] = "Tool deleted successfully!";
+                TempData["SuccessMessage"] = "Tool deleted successfully Conflicat-A";
             }
 
             return RedirectToAction(nameof(Index));
