@@ -134,8 +134,7 @@ namespace ToolManagementSystem.Controllers
                 _context.Tools.Remove(tool);
                 await _context.SaveChangesAsync();
 
-                //TempData["SuccessMessage"] = "Tool deleted successfully!";
-                TempData["SuccessMessage"] = "Tool permanently removed from inventory!";
+                TempData["SuccessMessage"] = "Tool permanently removed from inventory! Conflict-B";
             }
 
             return RedirectToAction(nameof(Index));
